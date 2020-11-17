@@ -1,0 +1,27 @@
+.NavBar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-right: 3vw;
+    height: 100px;
+    width: 100vw;
+    background-color: rgba(97, 218, 251, .9);
+    z-index: 1;
+
+}
+
+.NavBar img{
+    /* filter: hue-rotate(180de) */
+/* display: flex;
+justify-content: flex-start;
+height: 100%; */
+height: 50px;
+
+}
+
+.NavBar a{
+    margin-right: 20px;
+}
