@@ -1,0 +1,22 @@
+.landingPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    height: 100%;
+    top: 0px;
+    
+
+    color: black;
+    font-family: URW Chancery L, cursive;
+    font-weight: bolder;
+    font-size: 1.5em;
+    z-index: 2;
+
+}
+
+.break{
+    width: 200px;
+    color: blue;
+}

@@ -10,19 +10,24 @@ class Intro extends Component {
     }
 
     handleInputChange = (e) => {
+        console.log(e.target)
         let value = e.target.value;
-        this.setState({
-            user: value
-        })
+        this.setState({ futureName: value });
     }
 
-    render(){
-      return(
-      <header className="App-header">
-        <p>Welcome, I'm, a FullStack Developer </p>
-        <p>My name is {this.state.user}!</p>
-        <input onChange = {this.handleInputChange}/>
-      </header>)
+    updateUser = (e) => {
+        this.setState({user: this.state.futureName})
+    }
+
+    render() {
+        return (
+            <header className="App-header">
+                <p>Welcome, I'm, a FullStack Developer </p>
+                <p>My name is {this.state.user}!</p>
+                <input onChange={this.handleInputChange} />
+                <button onClick={this.updateUser}>Change Name</button>
+            </header>
+        )
     }
 }
 

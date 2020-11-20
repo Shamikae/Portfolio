@@ -1,7 +1,10 @@
 .App {
   text-align: center;
-  padding-top: 100px;
   background-color: #282c34;
+  min-height: 100px;
+  color: black;
+  height: 100vh;
+   
 }
 
 .App-logo {
@@ -24,6 +27,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  /* z-index: ; */
 }
 
 .App-link {
@@ -40,10 +44,40 @@
 }
 
 .link{
-    color: rgb(26, 26, 26);
+    /* color: #501446; */
+    color: black;
+    font-family: URW Chancery L, cursive;
+    font-weight: bold;
     text-decoration: none;
 }
 
 .link:hover{
-    color: teal;
+    color: #d90eeb;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 0 20px;
+    max-width: 1600px;
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+    
+}
+.homeBackground{
+
+    background-image: url(https://i.pinimg.com/originals/62/b8/9f/62b89f4eb5e9578741e159c4b09a09bc.jpg);background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1 );
 }
