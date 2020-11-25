@@ -26,7 +26,7 @@ class Portfolio extends Component {
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
                 tech: ['React', 'CSS', 'JavaScript', 'FullStack', 'All Projects'],
-                img: 'https://lh3.googleusercontent.com/proxy/LpVy9v42ZQf3rjVKNQOT9wjEqTWzirSVGhvA99TOFHVZ6Pnq894tmjddiSVzXbL1t7MEl6LwiOL6GESMVXJMf89TQgjgY5ByejT1WvK0BhsBwT3KRvCQ8NBkotgs2daIScJ36Z0C'
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlbI0mM9QoLYa3jzOXyRT00CQsloC1ffzw7Q&usqp=CAU'
             },
             {
                 url: 'https//videosync.com',
@@ -59,18 +59,22 @@ class Portfolio extends Component {
                 // })
                 .map((project, index) => {
                     return (
-                        
                         <div 
-                        key={index} 
-                        className={!project.tech.includes(this.state.filter)? 'projectCard shrink' : 'projectCard grow'}
-                        style={{backgroundImage:`url(${project.img || this.state.backgroundImage})`}}>
-
+                            key={index} 
+                            className={!project.tech.includes(this.state.filter)? 'projectCard shrink' : 'projectCard grow'}
+                            style={{backgroundImage:`url(${project.img || this.state.backgroundImage})`}}
+                        >
                             <div className='bar'> {project.title}</div>                   
                             <div className='projectOverlay'>
-                                <img className='projectImage' alt={project} src={project.img} />
+                                {/* <img className='projectImage' alt={project} src={project.img} /> */}
                                 <p className='cardDesc'>{project.desc}</p>
-                                <div className='technologies'><ul>{project.tech.map((tech, index) => {
-                                    return tech !== 'All Projects' ? <li key={index} value={tech} onClick={this.handelInputChange}>{tech}</li> : '' })}</ul>
+                                <div className='technologies'>
+                                    <ul>
+                                        {
+                                            project.tech.map((tech, index) => {
+                                            return tech !== 'All Projects' ? <li key={index} value={tech} onClick={this.handelInputChange}>{tech}</li> : '' })
+                                        }
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +86,7 @@ class Portfolio extends Component {
 
     render() {
         return (
-            <div className='Portfolio' name='Portfolio'>
+            <div className='portfolio' name='Portfolio'>
                 <h1 className="sectionHead">Web Developer Portfolio</h1>
 
                 <ul className="filter">
@@ -97,11 +101,11 @@ class Portfolio extends Component {
                     <li onClick={this.handelInputChange}>JavaScript</li>
                     <div>|</div>
                     <li onClick={this.handelInputChange}>Full Stack</li>
-                    <div>|</div>
+                    <div></div>
                 </ul>
                 {this.createCards()}
 
-                <h1>Portfolio</h1>
+                <h1>Project 5</h1>
             </div>
         )
     }

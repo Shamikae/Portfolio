@@ -11,6 +11,7 @@ function App() {
            <NavBar />
            <div className='overlay'></div>           
            <div className='homeBackground'></div>           
+           {/* <div className='portfolioBackground'></div>            */}
            <div className="container">
                <Router>
                    <Switch>

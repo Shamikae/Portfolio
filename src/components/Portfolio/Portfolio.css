@@ -1,14 +1,18 @@
 .portfolio{
     display: flex;
     flex-direction: column;
-    background-color: chartreuse;
+    align-items: center;
+    /* background-color: chartreuse; */
+    margin: 520px ;
+    width: 100%;
     
 }
 .projectCard{ 
-    height: 300px;
-    width: 400px;
+    height: 500px;
+    width: 800px;
     background-color: rgba(0, 0, 255, .5);
     background-size: cover;
+    margin-bottom: 10px;
     overflow: hidden;
 
 }
@@ -23,7 +27,7 @@
 }
 
 .shrink{
-    animation: shrink 1.5s ease forwards;
+    /* animation: shrink 1.5s ease forwards; */
 }
 @keyframes shrink {
     0%{
@@ -37,4 +41,8 @@
         transform: scale(0);
         position: absolute;
     }
+}
+
+ul{
+    list-style: none;
 }
