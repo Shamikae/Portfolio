@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './Portfolio.css';
-//Image, Icon, ShortDesc, URL, leads to project
-//Image, Title, Description (),
-//Image,
-
 
 class Portfolio extends Component {
     constructor(props) {

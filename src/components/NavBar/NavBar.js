@@ -8,7 +8,7 @@ function NavBar () {
         <div className="NavBar">
             <Logo/>
             <div>
-                <Link className='link' to='Home' smooth={true}>  Home</Link>
+                <Link className='link' to='Landingpage' smooth={true}> Home</Link>
                 <Link className='link' to='Portfolio' smooth={true}> Portfolio</Link>
                 <Link className='link' to='About' smooth={true}>  About</Link>
                 <Link className='link' to='Resume' smooth={true}> Resume</Link>
