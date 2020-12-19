@@ -70,11 +70,12 @@ class Portfolio extends Component {
                             <div className='bar'> {project.title}</div>  
                             {/* {console.log(project.tech.includes(this.state.filter),'<<<<<<') }                 */}
                             <div className='portcontainer'>
+                                <img className='projectImage' alt={project} src={project.img} />
                             <div className='projectOverlay'>
                                 {/* <img className='projectImage' alt={project} src={project.img} /> */}
                                 <p className='cardDesc'>{project.desc}</p>
                                 <div className='technologies'>                                
-                                    <ul>
+                                    <ul className='techStyle'>
                                         {
                                             project.tech.map((tech, index) => {
                                             return tech !== 'All Projects' ? <li key={index} value={tech} onClick={this.handelInputChange}>{tech}</li> : '' })

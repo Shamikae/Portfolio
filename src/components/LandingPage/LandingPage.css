@@ -6,10 +6,10 @@
     /* min-height: 500px; */
     height: 100vh;
     top: 0px;
-    width: 90vh;
-    
+    width: 90vw;
+    text-shadow: 2px 2px 2px rgb(30, 3, 187);
 
-    color: black;
+    color: whitesmoke;
     font-family: papyrus;
     font-weight: bolder;
     font-size: 1.5em;
