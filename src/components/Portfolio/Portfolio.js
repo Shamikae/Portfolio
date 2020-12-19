@@ -6,7 +6,7 @@ class Portfolio extends Component {
         super(props);
         this.state = {
             backgroundImage: 'https://www.ajactraining.org/wp-content/uploads/2019/09/image-placeholder.jpg',
-            filter: 'All Projects'
+            filter: 'HTML'
         };
         this.handelInputChange = this.handelInputChange.bind(this)
     }
@@ -21,28 +21,35 @@ class Portfolio extends Component {
                 url: 'https//videosync.com',
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
-                tech: ['React', 'CSS', 'JavaScript', 'FullStack', 'All Projects'],
+                tech: ['React', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
                 img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlbI0mM9QoLYa3jzOXyRT00CQsloC1ffzw7Q&usqp=CAU'
             },
             {
                 url: 'https//videosync.com',
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
-                tech: [ 'HTML', 'CSS', 'JavaScript', 'FullStack', 'All Projects'],
+                tech: [ 'HTML', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
                 img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu2tuA98vrqtvlD9ENpyZqwLzDLrlyoavsgg&usqp=CAU'
             },
             {
                 url: 'https//videosync.com',
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
-                tech: ['React', 'HTML', 'CSS', 'JavaScript', 'FullStack', 'All Projects'],
+                tech: ['React', 'HTML', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
                 img: 'https://brooksandkirk.co.uk/wp-content/uploads/2012/02/number-3.jpg'
             },
             {
                 url: 'https//videosync.com',
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
-                tech: ['React', 'HTML', 'CSS', 'JavaScript', 'FullStack', 'AllTitle Projects'],
+                tech: ['React', 'HTML', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
+                img: 'https://media1.giphy.com/media/WmXVyUmxKglfXfFAHa/giphy.gif'
+            },
+            {
+                url: 'https//videosync.com',
+                title: 'Title',
+                desc: 'VideoSync can sync your music like bluetooth',
+                tech: ['React', 'HTML', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
                 img: 'https://media1.giphy.com/media/WmXVyUmxKglfXfFAHa/giphy.gif'
             },
 
@@ -60,19 +67,23 @@ class Portfolio extends Component {
                             className={!project.tech.includes(this.state.filter)? 'projectCard shrink' : 'projectCard grow'}
                             style={{backgroundImage:`url(${project.img || this.state.backgroundImage})`}}
                         >
-                            <div className='bar'> {project.title}</div>                   
+                            <div className='bar'> {project.title}</div>  
+                            {/* {console.log(project.tech.includes(this.state.filter),'<<<<<<') }                 */}
+                            <div className='portcontainer'>
                             <div className='projectOverlay'>
                                 {/* <img className='projectImage' alt={project} src={project.img} /> */}
                                 <p className='cardDesc'>{project.desc}</p>
-                                <div className='technologies'>
+                                <div className='technologies'>                                
                                     <ul>
                                         {
                                             project.tech.map((tech, index) => {
                                             return tech !== 'All Projects' ? <li key={index} value={tech} onClick={this.handelInputChange}>{tech}</li> : '' })
                                         }
                                     </ul>
+                                    <button type="button" onclick="alert('Hello world!')">View Project</button>
                                 </div>
                             </div>
+                        </div>
                         </div>
                         
                     )
@@ -100,8 +111,6 @@ class Portfolio extends Component {
                     <div></div>
                 </ul>
                 {this.createCards()}
-
-                <h1>Project 5</h1>
             </div>
         )
     }
