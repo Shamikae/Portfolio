@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Portfolio.css';
-
+import notflixImage from './Assets/Notflix.png';
+import simpleCalcImage from './Assets/SimpleCalculator.png';
+import racingGameImage from './Assets/RacingGame.png'
 
 class Portfolio extends Component {
     constructor(props) {
@@ -23,21 +25,21 @@ class Portfolio extends Component {
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
                 tech: ['React', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
-                img: '/Assets/SimpleCalculator.png'
+                img: simpleCalcImage
             },
             {
                 url: 'https//videosync.com',
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
                 tech: [ 'HTML', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
-                img:'/Assets/RacingGame.png'
+                img: racingGameImage
             },
             {
                 url: 'https//videosync.com',
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
                 tech: ['React', 'HTML', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
-                img: '/Assets/Notflix.png'
+                img: notflixImage
             },
             {
                 url: 'https//videosync.com',
