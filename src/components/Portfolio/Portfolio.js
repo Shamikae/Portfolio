@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './Portfolio.css';
 
+
 class Portfolio extends Component {
     constructor(props) {
         super(props);
         this.state = {
             backgroundImage: 'https://www.ajactraining.org/wp-content/uploads/2019/09/image-placeholder.jpg',
-            filter: 'HTML'
+            filter: 'All Projects'
         };
         this.handelInputChange = this.handelInputChange.bind(this)
     }
@@ -22,21 +23,21 @@ class Portfolio extends Component {
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
                 tech: ['React', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
-                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlbI0mM9QoLYa3jzOXyRT00CQsloC1ffzw7Q&usqp=CAU'
+                img: '/Assets/SimpleCalculator.png'
             },
             {
                 url: 'https//videosync.com',
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
                 tech: [ 'HTML', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
-                img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu2tuA98vrqtvlD9ENpyZqwLzDLrlyoavsgg&usqp=CAU'
+                img:'/Assets/RacingGame.png'
             },
             {
                 url: 'https//videosync.com',
                 title: 'Title',
                 desc: 'VideoSync can sync your music like bluetooth',
                 tech: ['React', 'HTML', 'CSS', 'JavaScript', 'Full Stack', 'All Projects'],
-                img: 'https://brooksandkirk.co.uk/wp-content/uploads/2012/02/number-3.jpg'
+                img: '/Assets/Notflix.png'
             },
             {
                 url: 'https//videosync.com',
@@ -70,7 +71,7 @@ class Portfolio extends Component {
                             <div className='bar'> {project.title}</div>  
                             {/* {console.log(project.tech.includes(this.state.filter),'<<<<<<') }                 */}
                             <div className='portcontainer'>
-                                <img className='projectImage' alt={project} src={project.img} />
+                                {/* <img className='projectImage' alt={project} src={project.img} /> */}
                             <div className='projectOverlay'>
                                 {/* <img className='projectImage' alt={project} src={project.img} /> */}
                                 <p className='cardDesc'>{project.desc}</p>

@@ -33,7 +33,7 @@ li:active {
   }
 
 .projectCard{ 
-    height: 200px;
+    height: 300px;
     width: 800px;
     background-color: rgba(0, 0, 255, .5);
     background-size: cover;
@@ -72,11 +72,13 @@ li:active {
 
 ul{
     list-style: none;
+    padding: 0px;
 }
 
 .portcontainer{
     position: relative;
     width: 100%;
+    height: 100%;
 }
 
 .projectImage{
@@ -89,7 +91,7 @@ ul{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(127, 255, 0, .5);
+    background-color: rgba(0, 0, 2, 0.5);
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -106,7 +108,11 @@ p.cardDesc {
 }
 
 ul.techStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: darkcyan;
+    color: white;
 
 }
 
