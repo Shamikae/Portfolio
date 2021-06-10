@@ -1,4 +1,8 @@
 .resume{
     background-color: chartreuse;
-    height: 100vh;
+    width: 90%;
+}
+
+.resumeImg{
+    max-height: 1000px;
 }
